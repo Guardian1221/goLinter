@@ -1,0 +1,11 @@
+stages:
+  - test
+
+go_test:
+  stage: test
+  image: golang:1.25
+  script:
+    - go version
+    - cd loglint
+    - go test ./...
+
